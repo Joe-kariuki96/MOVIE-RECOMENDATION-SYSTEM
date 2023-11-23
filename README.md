@@ -77,7 +77,7 @@ conda activate movielens-fastai
 jupyter notebook
 Or, for instant immersion, click "Run on Binder" and join the Jupyter auditorium.
 
-🎭 Crafting the Collaborative Symphony
+## 🎭 Crafting the Collaborative Symphony
 
 In our model, users and movies take the stage as elegant vectors. A dot product between them predicts movie ratings, enriched by bias terms for outliers and a Sigmoid touch for a refined denouement.
 
@@ -93,7 +93,7 @@ Copy code
 learn.fit_one_cycle(5, 0.01)
 🌟 Spectacle of Predictions
 
-Marvel at the predictions – a dance in harmony with actual ratings. Let this model serenade you with recommendations that echo your cinematic soul.
+Marvel at the predictions—a dance in harmony with actual ratings. Let this model serenade you with recommendations that echo your cinematic soul.
 
 python
 Copy code
@@ -102,4 +102,5 @@ preds = learn.model(users, items)
 print('Real\tPred\tDifference')
 for p in list(zip(ratings, preds))[:16]:
     print('{}\t{:.1f}\t{:.1f}'.format(p[0],p[1],p[1]-p[0]))
+    
 Now, let the magic of personalized movie recommendations unfold before your eyes. 🌟🎥
